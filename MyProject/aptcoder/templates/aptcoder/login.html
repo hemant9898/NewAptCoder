@@ -1,0 +1,19 @@
+{% extends "aptcoder/layout.html" %}
+
+{% block body %}
+
+	<h3><a href="{% url 'aptcoder:index'%}">HOME</a></h3>
+	<h1 style="text-align:center; margin-top:70px">LOGIN</h1>
+	<form action="{% url 'aptcoder:login' %}" method="post">
+		{% csrf_token %}
+		<div class="mydiv"  style="margin-top: 100px">
+		Username:<input type="text" name="username" placeholder="USERNAME" style="height: 30px"><br><br><br>
+		Password:<input type="password" name="password" placeholder="PASSWORD" style="height: 30px"><br><br><br>
+		<input type="submit" name="Login" class="button">
+		</div>
+	</form>
+	{% if m %}
+		<div style="text-align: center"><h3>{{ m }}</h3></div>
+	{% endif %}
+		
+{% endblock %}

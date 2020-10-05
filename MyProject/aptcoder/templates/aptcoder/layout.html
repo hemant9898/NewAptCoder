@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NewAptCoder.com</title>
+	<style >
+		.mydiv{
+				border: 5px outset black;
+				text-align:center;
+				width: 450px;
+				margin-left: 32%;
+				margin-top: 10%;
+				padding: 2%;
+				border-radius: 20%;
+			}
+		.button{
+			background-color: #4CAF50; /* Green */
+				  color: white;
+				  text-align: center;
+				  display: inline-block;
+				  font-size: 16px;
+				  padding-left: 10px;
+				  background-color: black;
+				  border: 10px outset black;
+				  border-radius: 20%;
+		}
+		.myself{
+				border: 5px outset black;
+				text-align:center;
+				width: 300px;
+				padding: 2%;
+				border-radius: 20%;
+			}
+		.whole{
+			border: 5px outset black;
+			width: 1450px;
+			height: 700px;
+			padding-top:20px;
+			padding-left: 20px;
+			border-radius: 3%;
+		}
+	</style>
+	<script>
+		function validateForm() {
+		  var x = document.forms["myForm"]["course"].value;
+		  if (x == "" || x == null) {
+		    alert("No courses are available");
+		    return false;
+		  }
+		}
+	</script>
+</head>
+<body style="background-color:LightGray">
+	{% block body %}
+	
+	{% endblock %}
+
+</body>
+</html>

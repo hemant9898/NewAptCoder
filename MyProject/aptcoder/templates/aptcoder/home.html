@@ -1,0 +1,21 @@
+{% extends "aptcoder/layout.html" %}
+
+{% block body %}
+<h1 style="text-align: center;color: blue;margin-top: 5%">WELCOME TO APTCODER</h1>
+<div class="mydiv" style="width: 20%;margin-top:10%;margin-left: 38%">
+	<ul>
+		<li style="text-align: left">
+			<b><h3><a href="{% url 'aptcoder:register_student' %}">REGISTERED AS STUDENT</a></h3></b>
+		</li>
+		<br>
+		<li style="text-align: left">
+			<b><h3><a href="{% url 'aptcoder:register_teach' %}">REGSITERED AS TEACHER </a></h3></b>
+		</li>
+		<br>
+		<li style="text-align: left">
+			<b><h3><a href="{% url 'aptcoder:login' %}">LOGIN</a></h3></b>
+		</li>
+
+	</ul>
+</div>
+{% endblock %}

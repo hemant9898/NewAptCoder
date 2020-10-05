@@ -1,0 +1,28 @@
+{% extends "aptcoder/layout.html" %}
+
+
+{% block body %}
+<h3><a href="{% url 'aptcoder:index'%}">HOME</a></h3>
+	<h1 style="text-align:center; margin-top:0%">Regsitration</h1>
+
+	<form action="{% url 'aptcoder:register_student' %}" method="POST">
+		{%  csrf_token %}
+		<div class="mydiv">
+			Email:{{form.email}}<br><br>
+			Roll Number:{{form.rolln}}<br><br>
+			Username:{{form.username}}<br><br>
+			Password:{{form.password1}}<br><br>
+			Confirm Password:{{form.password2}}<br><br>
+		
+		<input type="submit"  name="submit" align="center" class="button">
+		</div>
+	</form>
+	<ul style="margin-left: 35%">
+		<h3>Pasword should be:</h3>
+		<li>150 characters or fewer. Letters, digits and @/./+/-/_ only.</li>
+		<li>Your password can’t be too similar to your other personal information.</li>
+		<li>Your password must contain at least 8 characters.</li>
+		<li>Your password can’t be a commonly used password.</li>
+		<li>Your password can’t be entirely numeric.</li>
+	</ul>
+{% endblock %}
